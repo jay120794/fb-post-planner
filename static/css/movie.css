@@ -1,0 +1,91 @@
+body {
+	background-image: url(http://hdwallpaper.co.in/wallpapers/hd-abstract-background-5-1920x1080.jpg);
+	background-attachment: fixed;
+	background-position: fixed;
+	background-repeat: none;
+	height: 500px;
+	width: 900px;
+}
+
+#mario {
+	width: 600px;
+	background-color: rgba(0,0,0, 0.5);
+	display: inline-block;
+	margin-right: 50px;
+	margin-left: -50px;
+	padding-right: 40px;
+	padding-left: 40px;
+	position: relative;
+	height: 350px;
+	margin-bottom: 30px;
+	margin-top: 30px;
+	padding-top: 30px;
+}
+
+#tinypic {
+	position: absolute; 
+	height: 90px; 
+	width: 85px; 
+	padding-left:25px; 
+	padding-bottom: 5px; 
+	margin-top: 210px;
+}
+
+#backdrop {
+	width: 450;
+	height:300; 
+	z-index: -1; 
+	position: relative;
+	border: solid 1px #fffff0;
+	margin: 10px;
+}
+
+#title {
+	position: absolute; 
+	margin-top: -115px; 
+	margin-left: 100px;
+
+}
+
+#castimg {
+	width: 50px; 
+	height: 50px; 
+	z-index: -1; 
+	margin-top: -20px; 
+	margin-bottom: 10px;
+	margin-left: -20px;
+}
+
+#castdiv {
+	color: white; 
+	background-color: rgba(0,0,0, 0.5); 
+	position: relative; 
+	clear: right; 
+	width: 350px; 
+	height: 250px; 
+	overflow: scroll; 
+	float: right; 
+	margin-top: 20px; 
+	padding-left: 20px;
+	margin-right: 50px;
+}
+
+#synopsis {
+	color: white; 
+	background-color: 
+	rgba(0,0,0, 0.5); 
+	padding: 20px; 
+	padding-top: 0px;
+}
+
+#tagvote {
+	background-color: rgba(0,0,0,0.5); 
+	clear:left; 
+	float: left; 
+	position: relative; 
+	padding: 20px; 
+	color: white; 
+	margin-left: 15px; 
+	margin-top: 15px; 
+	width: 540px;
+}
