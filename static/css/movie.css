@@ -1,10 +1,9 @@
 body {
-	background-image: url(http://hdwallpaper.co.in/wallpapers/hd-abstract-background-5-1920x1080.jpg);
+	background-image: url(http://i1310.photobucket.com/albums/s660/Oiram_Decierra/bluuuuuuuur_zps1a7480b6.jpg);
 	background-attachment: fixed;
 	background-position: fixed;
 	background-repeat: none;
-	height: 500px;
-	width: 900px;
+	background-size: 100% 100%;
 }
 
 #mario {
@@ -22,6 +21,29 @@ body {
 	padding-top: 30px;
 }
 
+#frontdiv {
+	width: 80%; 
+	height: 300px; 
+	padding: 30px; 
+	padding-top: 5px; 	
+	margin-top: 50px; 
+	margin-left: 90px; 
+	background-color: rgba(0,0,0,0.4);
+}
+
+#textarea {
+	resize:none; 
+	background-color: rgba(255,250,250,0.5); 
+	color: black; 
+	height: 150px;
+}
+
+#button {
+	margin: auto; 
+	margin-top: 20px; 
+	float: right;
+}
+/*
 #tinypic {
 	position: absolute; 
 	height: 90px; 
@@ -88,3 +110,5 @@ body {
 	margin-top: 15px; 
 	width: 540px;
 }
+
+*/

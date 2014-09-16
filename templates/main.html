@@ -17,7 +17,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">Team-15 | fb-postplanner</a>
+          <a class="navbar-brand" href="/">Team-15 | fb-post-planner</a>
         </div>
         <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
@@ -33,17 +33,18 @@
               </div>
             </div>
            
-        <div class="container" style='top: 70px; position: relative;'> 
+        <div class="container" style='top: 70px; position: relative;'  id="secondImg"> 
           <form role="form" id="post-fb-message">
-          <div style="">
-            <h3>Message</h3>
-            <textarea class = "fb-message" g></textarea>
+          <div id="frontdiv">
+            <h3 style="color: white;">Message:</h3>
+            <textarea id = "fb-message" class="form-control" type="text" placeholder="Your status here.." style="resize:none; background-color: rgba(255,250,250,0.5); color: black; height: 150px;"></textarea>
             <div>
-            <button type="submit" class="btn btn-default btn-facebook" style="margin-right: 50px;">Post</button>
+            <button type="submit" class="btn btn-default btn-facebook" id="button">Post Status</button>
             </div>
           </div>
           </form>
         </div><!-- /.container -->
+
 
         
         <script src="/static/js/vendors/jquery.js"></script>

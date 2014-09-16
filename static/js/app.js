@@ -27,7 +27,7 @@ window.fbAsyncInit = function() {
  
         $("#post-fb-message").submit(function(){
         if(user){
-        var msg = $(".fb-message").val();
+        var msg = $("#fb-message").val();
         postToFB(msg);
         return false;
         }else{
@@ -51,7 +51,7 @@ window.fbAsyncInit = function() {
  
         $.get(url,data,function(response){
         if(response.id){
-        var msg = $(".fb-message").val("");
+        var msg = $("#fb-message").val("");
         }
         });
         };
