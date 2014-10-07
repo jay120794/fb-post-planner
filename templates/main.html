@@ -1,55 +1,42 @@
-<html>
-<head>
-    <title>Final Project | Team 15</title>
-    <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="/static/css/movie.css">
-  
-</head>
+<div class="container" style='top: 70px; position: relative;'>
 
-<body>
+        <form role="form" id="post-form" action="/" method="post" class="col-md-8">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Status: </label>
+            <div  style="">
+            <div class="fbpost">
+                  <textarea name="message" class="form-control" id="message" required placeholder="Write Something..." type="text"></textarea>
+                </div>
+            <input type="hidden" name="access_token" value="">
+            <input type="hidden" name="fbID" value="">
 
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="/">Team-15 | fb-post-planner</a>
-        </div>
-        <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-              <li><a href="#">Blank</a></li>
-              <li><a href="#">Blank</a></li>
-              <li><a href="#">Blank</a></li>
-            </ul>
-        <div>
-            <div id="fb-login" type="button" class="btn btn-primary navbar-btn navbar-right"><i class="fa fa-facebook"></i> | Sign in</div>
-            <div id="fb-logout" type="button" class="btn btn-primary navbar-btn navbar-right" style="display:none;"><i class="fa fa-facebook"></i> | Logout</div>
-        </div>
-                </div><!--/.nav-collapse -->
-              </div>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker'>
+                    <input type='text' class="form-control" name="date_to_post" placeholder="Date to post"/>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar" required></span>
+                    </span>
+                </div>
             </div>
-           
-        <div class="container" style='top: 70px; position: relative;'  id="secondImg"> 
-          <form role="form" id="post-fb-message">
-          <div id="frontdiv">
-            <h3 style="color: white;">Message:</h3>
-            <textarea id = "fb-message" class="form-control" type="text" placeholder="Your status here.." style="resize:none; background-color: rgba(255,250,250,0.5); color: black; height: 150px;"></textarea>
-            <div>
-            <button type="submit" class="btn btn-default btn-facebook" id="button">Post Status</button>
-            </div>
+            
+         
+          <div class="button">
+            <button id="button" type="submit" class="btn btn-default btn-facebook">Schedule</button>
+            <div id="post-now" type="submit" class="btn btn-default btn-facebook">Post</div>
           </div>
-          </form>
-        </div><!-- /.container -->
+        </div>
+         </div>
+        </form>
+        <div class="fb-like" data-href="https://developers.facebook.com/apps/539116639521636/dashboard/" data-layout="standard" data-action="like" data-show-faces="false" data-share="false"></div>
+        <footer>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p>Copyright © Team 15 | Advance Web Computing</p>
+                    </div>
+                </div>
+                <!-- /.row -->
+            </footer>
 
 
-        
-        <script src="/static/js/vendors/jquery.js"></script>
-        <script src="/static/js/vendors/bootstrap.min.js"></script>
-        <script src="/static/js/app.js"></script>
+</div>
 </body>
-
 </html>
