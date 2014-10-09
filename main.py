@@ -16,7 +16,9 @@ import sched
 import time
 import threading
 
-#3
+FACEBOOK_APP_ID = "539116639521636"
+FACEBOOK_APP_SECRET = "86dcd0c2811c845d5545335c53f6a297"
+GRAPH_API_URL ="https://graph.facebook.com/v2.1"
 
 JINJA_ENVIRONMENT = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
@@ -49,7 +51,20 @@ def post_to_facebook(data,id):
     result = urlfetch.fetch(url=url,payload=form_data,method=urlfetch.POST)
     content = json.loads(result.content)
     return content
-#1
+
+def short_to_long_lived(access_token,self):
+    url = "https://graph.facebook.com/oauth/access_token"
+    data = {
+        "grant_type" : "fb_exchange_token",
+        "fb_exchange_token": access_token,
+        "client_id" : FACEBOOK_APP_ID,
+        "client_secret" : FACEBOOK_APP_SECRET,
+        
+    }
+    form_data = urllib.urlencode(data)
+    result = urlfetch.fetch(url=url,payload=form_data,method=urlfetch.POST)
+    return result.content
+    
 def decode_response(str):
     access_token = str.split("&")[0].split("=")[1]
     return {
@@ -119,7 +134,25 @@ class EditPostHandler(webapp2.RequestHandler):
             "date" : date
         }
         write_template(self,"edit.html",template_values)
-    #2&4
+    #2
+
+class DeleteHandler(webapp2.RequestHandler):
+    def get(self,id):
+        post = Posts.get_by_id(long(id))
+        post.key.delete()
+        self.response.write("<script> alert('Edit Successful.');window.location.assign('/list/"+post.user_id+"')</script>")
+
+class PostAllScheduledPosts(webapp2.RequestHandler):
+    def get(self):
+        p = Posts()
+        p.date_to_post = datetime.now()
+        posts = Posts.query(ndb.AND(Posts.date_to_post <= datetime.now()+timedelta(hours=8),
+            Posts.status=="TBP")).fetch()
+        for post in posts:
+            data = post_to_object(post)
+            post_to_facebook(data,post.user_id)
+            post.status="Posted"
+            post.put()
         
 
 application = webapp2.WSGIApplication([
