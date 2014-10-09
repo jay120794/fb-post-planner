@@ -1,24 +1,32 @@
 body {
-	background-image: url(http://goo.gl/8wus9o);
+	background-image: url(http://goo.gl/6NPDDh);
 	background-attachment: fixed;
 	background-position: fixed;
 	background-repeat: none;
-	background-size: 120% 120%;
+	background-size: 100% 100%;
 }
 
-#mario {
-	width: 600px;
-	background-color: rgba(0,0,0, 0.5);
-	display: inline-block;
-	margin-right: 50px;
-	margin-left: -50px;
-	padding-right: 40px;
-	padding-left: 40px;
-	position: relative;
-	height: 350px;
-	margin-bottom: 30px;
-	margin-top: 30px;
-	padding-top: 30px;
+.mario {
+	background-color: 
+	rgba(10,100,205,0.5); 
+	padding-right: 0px; 
+	margin-left: 17%; 
+	height: 300px;
+	width: 66.66666667%;
 }
 
+.message {
+	background-color: #f0ffff; 
+	color: #0A64CD; 
+	font-size: 24px; 
+	width: 760px; 
+	padding:5px; 
+	padding-left: 13px;
+}
+
+#sched {
+	float: right; 
+	margin-right: 20px; 
+	margin-bottom: 20px;
+}
 

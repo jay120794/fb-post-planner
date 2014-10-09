@@ -1,35 +1,34 @@
 <div class="container" style='top: 70px; position: relative;'>
+    <br> <br>
 
-        <form role="form" id="post-form" action="/" method="post" class="col-md-8">
+        <form role="form" id="post-form" action="/" method="post" class="mario">
           <div class="form-group">
-            <label for="exampleInputEmail1">Status: </label>
-            <div  style="">
+            <label for="exampleInputEmail1" class="message">Message: </label>
             <div class="fbpost">
-                  <textarea name="message" class="form-control" id="message" required placeholder="Write Something..." type="text"></textarea>
+                  <textarea name="message" class="form-control" id="message" required placeholder="Write Something..." type="text" style="resize: none; height: 90px;"></textarea>
                 </div>
             <input type="hidden" name="access_token" value="">
             <input type="hidden" name="fbID" value="">
 
             <div class="form-group">
                 <div class='input-group date' id='datetimepicker'>
-                    <input type='text' class="form-control" name="date_to_post" placeholder="Date to post"/>
+                    <input type='text' class="form-control" name="date_to_post" placeholder="Set date to post." style="width: 160px;"/>
                     <span class="input-group-addon"><span class="glyphicon glyphicon-calendar" required></span>
                     </span>
                 </div>
             </div>
             
          
-          <div class="button">
-            <button id="button" type="submit" class="btn btn-default btn-facebook">Schedule</button>
-            <div id="post-now" type="submit" class="btn btn-default btn-facebook">Post</div>
+          <div class="button" id="sched">
+            <button id="button" type="submit" class="btn btn-default btn-facebook" style="margin-right: 20px;">Schedule Status</button>
+            <div id="post-now" type="submit" class="btn btn-default btn-facebook"><strong>Post Status</strong></div>
           </div>
-        </div>
          </div>
         </form>
-        <div class="fb-like" data-href="https://developers.facebook.com/apps/539116639521636/dashboard/" data-layout="standard" data-action="like" data-show-faces="false" data-share="false"></div>
+        <div class="fb-like" data-href="https://developers.facebook.com/apps/539116639521636/dashboard/" data-layout="standard" data-action="like" data-show-faces="false" data-share="false" style="margin-left: 17%;"></div>
         <footer>
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-12" style="position: absolute; margin-left: 51%; margin-top: -20px;">
                         <p>Copyright © Team 15 | Advance Web Computing</p>
                     </div>
                 </div>
