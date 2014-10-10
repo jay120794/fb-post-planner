@@ -1,0 +1,72 @@
+<html>
+<body>
+  <br>
+<div class="container" style='top: 70px; position: relative;'>
+  
+  <div class="post">
+    <div class="postlist">
+    	<div class="sched"><label>Scheduled Posts:</label></div>
+    	{% for post in posts %}
+    	
+       		<div class="panel panel-info">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">{{post.date_to_post}}
+			    	<a class="badge pull-right" href="/edit/{{post.key.id()}}" id="edilete">Edit</a>
+			    	<a class="badge pull-right" href="/delete/{{post.key.id()}}" id="edilete">Delete</a>
+			    </h3>
+			    
+			  </div>
+			  <div class="panel-body">
+			    {{post.message}}
+			  </div>
+			</div>
+    	{% else %}
+    	
+    	<div style="padding-bottom: 20px;">
+       	 	No post to show.
+       	 </div>
+       	 {% endfor %}
+
+    </div>
+
+    <div class="postlist">
+      <div class="sched"><label>Posted:</label></div>
+      {% for post in posted %}
+      
+          <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">{{post.date_to_post}}
+            <a class="badge pull-right" href="/delete/{{post.key.id()}}">Delete</a>
+          </h3>
+          
+        </div>
+        <div class="panel-body">
+          {{post.message}}
+        </div>
+      </div>
+      {% else %}
+      
+      <div>
+          No post to show.
+         </div>
+         {% endfor %}
+
+    </div>
+  </div>
+
+
+    	<!-- End of Content-->
+        <div class="fb-like" data-href="https://developers.facebook.com/apps/539116639521636/dashboard/" data-layout="standard" data-action="like" data-show-faces="false" data-share="false" style="margin-left: 7%; margin-top: 10px;"></div>
+
+        <footer>
+                <div class="row">
+                    <div class="col-lg-12" style="position: absolute; margin-left: 59.1%; margin-top: -20px;">
+                        <p>Copyright © Team 15 | Advance Web Computing</p>
+                    </div>
+                </div>
+                <!-- /.row -->
+            </footer>
+
+</div>
+</body>
+</html>

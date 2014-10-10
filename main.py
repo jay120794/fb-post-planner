@@ -134,7 +134,13 @@ class EditPostHandler(webapp2.RequestHandler):
             "date" : date
         }
         write_template(self,"edit.html",template_values)
-    #2
+        
+    def post(self,id):
+        post = Posts.get_by_id(long(id))
+        post.message = self.request.get("message")
+        post.date_to_post = datetime.strptime(self.request.get("date_to_post"),'%m/%d/%Y %I:%M %p')
+        post.put()
+        self.response.write("<script> alert('Edit Successful.');window.location.assign('/list/"+post.user_id+"')</script>")
 
 class DeleteHandler(webapp2.RequestHandler):
     def get(self,id):

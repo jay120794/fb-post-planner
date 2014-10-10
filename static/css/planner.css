@@ -7,8 +7,7 @@ body {
 }
 
 .mario {
-	background-color: 
-	rgba(10,100,205,0.5); 
+	background-color: rgba(10,100,205,0.5); 
 	padding-right: 0px; 
 	margin-left: 17%; 
 	height: 300px;
@@ -24,9 +23,44 @@ body {
 	padding-left: 13px;
 }
 
-#sched {
+#schedbutton {
 	float: right; 
 	margin-right: 20px; 
 	margin-bottom: 20px;
 }
 
+.post {
+	background-color: rgba(10,100,205,0.5); 
+	width: 85%; 
+	padding: 20px; 
+	padding-top: 0px; 
+	margin-left: 7%;
+}
+
+.sched {
+	background-color: #f0ffff; 
+	color: #0A64CD; 
+	font-size: 24px; 
+	padding: 5px; 
+	padding-bottom: 0px; 
+	margin-bottom: 20px; 
+	width: 799px; 
+	margin-left: -20px; 
+	padding-left: 12px;
+}
+
+#edilete {
+	border-radius: 0px; 
+	margin-left: 5px; 
+	background-color: 
+	rgba(10,100,205,0.7);
+}
+
+.editdiv {
+	padding: 20px; 
+	padding-left: 40px; 
+	height: 200px;
+	background-color: rgba(10,100,205,0.5); 
+	margin-left: 17%; 
+	width: 66.66666667%;
+}
